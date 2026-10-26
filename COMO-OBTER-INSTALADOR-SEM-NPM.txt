@@ -1,0 +1,27 @@
+FINANCAS PESSOAIS - INSTALADOR WINDOWS SEM NPM NO SEU COMPUTADOR
+
+O instalador final (.exe) NAO exige Node.js nem npm para instalar ou usar.
+Este ZIP contem o codigo e a automacao para gerar o instalador em um
+servidor Windows do GitHub Actions, sem instalar ferramentas no seu PC.
+
+COMO GERAR O EXE UMA UNICA VEZ:
+1. Entre na sua conta GitHub e crie um repositorio privado ou publico.
+2. Envie o CONTEUDO desta pasta para a raiz do repositorio, inclusive
+   a pasta oculta .github/workflows.
+3. Abra a aba Actions do repositorio.
+4. Selecione 'Gerar instalador Windows' e clique em 'Run workflow'.
+5. Ao finalizar, abra a execucao e baixe o arquivo em Artifacts:
+   'Financas-Pessoais-Instalador-Windows'.
+6. Extraia o ZIP baixado e execute Financas-Pessoais-Setup-1.9.12.exe.
+
+INSTALACAO DO APLICATIVO:
+- Basta dar dois cliques no EXE.
+- Escolha a pasta de instalacao.
+- Atalhos de desktop e menu Iniciar sao criados.
+- O aplicativo roda sem npm, Node.js ou terminal.
+- Os dados locais sao mantidos na pasta de perfil do usuario.
+
+OBSERVACAO: Este pacote NAO contem o instalador EXE ja compilado.
+A geracao do EXE precisa executar a compilacao em Windows (a automacao
+faz isso remotamente). O Windows pode mostrar aviso SmartScreen porque
+o instalador nao tem assinatura digital de editor verificado.
