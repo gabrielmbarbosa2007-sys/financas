@@ -1,0 +1,45 @@
+{
+  "name": "financas-pessoais-desktop",
+  "version": "1.9.12",
+  "private": true,
+  "description": "Finanças Pessoais - aplicativo desktop Windows",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist:win": "electron-builder --win nsis --x64"
+  },
+  "devDependencies": {
+    "electron": "^33.4.11",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "br.com.financaspessoais.desktop",
+    "productName": "Finanças Pessoais",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "index.html",
+      "main.js",
+      "package.json"
+    ],
+    "asar": true,
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Finanças Pessoais",
+      "uninstallDisplayName": "Finanças Pessoais",
+      "deleteAppDataOnUninstall": false,
+      "artifactName": "Financas-Pessoais-Setup-${version}.${ext}",
+      "language": "1046",
+      "perMachine": false
+    }
+  }
+}

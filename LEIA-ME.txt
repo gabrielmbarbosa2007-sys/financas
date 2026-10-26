@@ -1,0 +1,28 @@
+FINANÇAS PESSOAIS 1.9.12 - INSTALADOR WINDOWS
+
+ESTE PACOTE CONTÉM O PROJETO PRONTO PARA GERAR O INSTALADOR .EXE.
+O executável ainda precisa ser compilado em um computador Windows.
+
+1. Instale Node.js LTS no Windows (inclui npm).
+2. Extraia este ZIP.
+3. Execute COMPILAR-NO-WINDOWS.bat (precisa de internet na primeira vez).
+4. Aguarde o instalador em dist\Financas-Pessoais-Setup-1.9.12.exe.
+5. Execute o .exe. No assistente, clique em Próximo, escolha a pasta de instalação
+   usando Procurar (ex.: C:\Programas\Financas Pessoais), avance e clique em Instalar.
+6. A escolha da pasta de instalação NÃO altera a pasta de dados salvos.
+   Os dados permanecem em %APPDATA%\FinancasPessoais para sobreviver a atualizações.
+
+DADOS SALVOS
+O aplicativo continua salvando automaticamente via localStorage do Chromium.
+O perfil persistente do Electron fica em %APPDATA%\FinancasPessoais,
+com armazenamento da partição persist:financas-pessoais.
+Não apague essa pasta se quiser manter os dados.
+A desinstalação está configurada para não apagar dados do aplicativo.
+
+IMPORTANTE: Dados salvos anteriormente em um navegador não migram automaticamente
+para o aplicativo desktop. No navegador antigo, use a opção de EXPORTAR BACKUP
+JSON; no aplicativo instalado, use RESTAURAR BACKUP para importar os registros.
+Recomenda-se manter cópias de backup JSON periodicamente.
+
+O instalador não é assinado digitalmente. O Windows pode exibir um aviso de
+segurança para executáveis não assinados.
